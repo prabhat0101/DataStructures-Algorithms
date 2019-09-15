@@ -55,11 +55,4 @@ namespace Trees.BinaryTree
         }
     }    
 
-    public class TreeStats
-    {
-        public int Height = 0;
-    }
-
-
-
 }
