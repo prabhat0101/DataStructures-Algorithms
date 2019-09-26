@@ -60,5 +60,29 @@ namespace DataStructures
             }
             //Console.WriteLine(v);
         }
+
+        public void BFS(int v, Queue<int> queue)
+        {
+            Console.WriteLine(v);
+            visited[v] = true;
+            if (Edges.Keys.Any(k => k == v))
+            {
+                foreach (var i in Edges[v])
+                {
+                    if (!visited[i])
+                    {
+                        visited[i] = true;
+                        queue.Enqueue(i);
+                    }
+                }
+            }
+            if (queue.Count == 0)
+            {
+                //Console.WriteLine(v);
+                return;
+            }
+            BFS(queue.Dequeue(),queue);   
+            //Console.WriteLine(v);
+        }
     }
 }

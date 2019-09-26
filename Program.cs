@@ -19,24 +19,42 @@ namespace DataStructures
 
             var v = int.Parse(Console.ReadLine());
             var g = new Graph(v);
-            //Adding edges statically, in actual problem this has to be read from console.
+
+            //BFS Traversal                  
             g.AddEdge(1, 2);
-            g.AddEdge(3, 2);
-            g.AddEdge(4, 3);
-            g.AddEdge(6, 7);            
+            g.AddEdge(1, 10);
+            g.AddEdge(2, 3);
+            g.AddEdge(3, 4);
+            g.AddEdge(3, 5);
+            g.AddEdge(4, 24);
+            g.AddEdge(5, 9);
+            g.AddEdge(5, 6);
+            g.AddEdge(6, 8);
+            var queue = new Queue<int>();
+            g.BFS(1, queue);
+            //BFS Traversal End
 
-            var disconnectedComponentCount = 0;
+            //Adding edges statically, in actual problem this has to be read from console.
+            //Number of disconnected components
 
-            for(int i = 1; i < v+1; i++)
-            {
-                if (!g.visited[i])
-                {
-                    disconnectedComponentCount++;
-                    g.DFS(i);
-                }
-            }
+            //g.AddEdge(1, 2);
+            //g.AddEdge(3, 2);
+            //g.AddEdge(4, 3);
+            //g.AddEdge(6, 7);
+            //var queue = new Queue<int>();
+            //var disconnectedComponentCount = 0;
 
-            Console.WriteLine(disconnectedComponentCount);
+            //for (int i = 1; i < v + 1; i++)
+            //{
+            //    if (!g.visited[i])
+            //    {
+            //        disconnectedComponentCount++;
+            //        g.BFS(i, queue);
+            //    }
+            //}
+
+            //Console.WriteLine(disconnectedComponentCount);
+
             Console.ReadKey();
         }
     }
