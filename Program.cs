@@ -12,26 +12,27 @@ namespace DataStructures
         static void Main(string[] args)
         {
 
-            //var root = BinaryTree.CreateBinaryTree();            
+            var root = BinaryTree.CreateBinaryTree();
+            BinaryTree.InOrder(root);
             //var height = BinaryTree.Height(root);
             //Console.WriteLine(height);
             //Console.WriteLine(BinaryTree.LeftHeight + BinaryTree.RightHeight + 1);
 
-            var v = int.Parse(Console.ReadLine());
-            var g = new Graph(v);
+            //var v = int.Parse(Console.ReadLine());
+            //var g = new Graph(v);
 
             //BFS Traversal                  
-            g.AddEdge(1, 2);
-            g.AddEdge(1, 10);
-            g.AddEdge(2, 3);
-            g.AddEdge(3, 4);
-            g.AddEdge(3, 5);
-            g.AddEdge(4, 24);
-            g.AddEdge(5, 9);
-            g.AddEdge(5, 6);
-            g.AddEdge(6, 8);
-            var queue = new Queue<int>();
-            g.BFS(1, queue);
+            //g.AddEdge(1, 2);
+            //g.AddEdge(1, 10);
+            //g.AddEdge(2, 3);
+            //g.AddEdge(3, 4);
+            //g.AddEdge(3, 5);
+            //g.AddEdge(4, 24);
+            //g.AddEdge(5, 9);
+            //g.AddEdge(5, 6);
+            //g.AddEdge(6, 8);
+            //var queue = new Queue<int>();
+            //g.BFS(1, queue);
             //BFS Traversal End
 
             //Adding edges statically, in actual problem this has to be read from console.

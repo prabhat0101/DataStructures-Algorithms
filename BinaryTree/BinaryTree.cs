@@ -40,6 +40,15 @@ namespace Trees.BinaryTree
             RightHeight = rightHeight;            
             return height;
         }       
+
+        public static void InOrder(Node node)
+        {
+            if (node.Left != null)
+                InOrder(node.Left);
+            Console.WriteLine(node.Data);
+            if (node.Right != null)
+                InOrder(node.Right);            
+        }
         
     }
 
