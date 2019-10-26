@@ -11,9 +11,14 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            int[] arr = { 12, 11, 13, 5, 6, 7 };
+            int n = arr.Length;
 
-            var root = BinaryTree.CreateBinaryTree();
-            BinaryTree.InOrder(root);
+            HeapSort ob = new HeapSort();
+            ob.Sort(arr);
+
+            //var root = BinaryTree.CreateBinaryTree();
+            //BinaryTree.InOrder(root);
             //var height = BinaryTree.Height(root);
             //Console.WriteLine(height);
             //Console.WriteLine(BinaryTree.LeftHeight + BinaryTree.RightHeight + 1);

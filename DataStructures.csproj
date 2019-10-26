@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BinaryTree\BinaryTree.cs" />
     <Compile Include="Graph\Graph.cs" />
+    <Compile Include="Heap\HeapSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
