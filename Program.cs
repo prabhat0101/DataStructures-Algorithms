@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructures.Sorting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,13 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            int[] arr = { 12, 11, 13, 5, 6, 7 };
+            int[] arr = { 2,8,6,14,5,4,3,9,1,17,7 };
             int n = arr.Length;
 
-            HeapSort ob = new HeapSort();
-            ob.Sort(arr);
+            QuickSort qs = new QuickSort();
+            qs.Sort(arr);
+            //HeapSort ob = new HeapSort();
+            //ob.Sort(arr);
 
             //var root = BinaryTree.CreateBinaryTree();
             //BinaryTree.InOrder(root);
